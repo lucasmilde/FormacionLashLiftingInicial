@@ -1076,7 +1076,7 @@
   .barra::before{ content:""; position:absolute; left:6px; right:6px; top:1px; height:1px; background: rgba(255,255,255,.7); }
   .luz{
     position:absolute; left:0; top:-1px;
-    width: calc(100% / 8); height: 6px;
+    width: calc(100% * 3 / 8); height: 6px;
     border-radius: 3px;
     overflow: hidden;
     background: linear-gradient(90deg, var(--magenta), #FF5CA3);
@@ -1089,7 +1089,7 @@
   }
   .halo{
     position:absolute; left:-6px; top:-9px;
-    width: calc(100% / 8 + 12px); height: 22px;
+    width: calc(100% * 3 / 8 + 12px); height: 22px;
     border-radius: 11px;
     background: var(--magenta);
     opacity:.14;
@@ -1148,12 +1148,12 @@
     .tarjeta{ grid-column: 3; grid-row: 1; width: auto; max-width: none; align-items:flex-start; text-align:left; }
     .barra{ left: 10px; right: auto; top: 0; bottom: 0; width: 4px; height: auto; }
     .barra::before{ left:1px; right:auto; top:6px; bottom:6px; width:1px; height:auto; }
-    .luz{ left:-1px; top:0; width:6px; height:38px; background: linear-gradient(180deg, var(--magenta), #FF5CA3); }
+    .luz{ left:-1px; top:0; width:6px; height:140px; background: linear-gradient(180deg, var(--magenta), #FF5CA3); }
     .luz::after{
       left:1px; top:-34px; width:4px; height:34px;
       background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.95));
     }
-    .halo{ left:-9px; top:-6px; width:22px; height:50px; border-radius:11px; }
+    .halo{ left:-9px; top:-6px; width:22px; height:152px; border-radius:11px; }
     .barra-cap{ left:-3px; top:0; }
   }
   @media (max-width: 860px) and (prefers-reduced-motion: no-preference){
@@ -1345,22 +1345,24 @@
             <div class="fecha" aria-hidden="true"><span class="dia">10</span><span class="mes">oct</span></div>
             <span class="tallo" aria-hidden="true"></span>
           </div>
-          <div class="nodo-fila" aria-hidden="true"><span class="nodo"><span class="onda"></span><span class="onda"></span></span></div>
+          <div class="nodo-fila" aria-hidden="true"><span class="nodo"></span></div>
           <span class="conector" aria-hidden="true"></span>
           <div class="tarjeta">
             <strong><span class="visually-hidden">10 de octubre: </span>Clases asincrónicas</strong>
             <span class="estado">¡Ya disponible!</span>
           </div>
         </li>
-        <li class="hito">
+        <li class="hito activo">
           <div class="arriba">
+            <span class="star" style="--x:-58px;--y:54px;--s:12px" aria-hidden="true"></span>
             <div class="fecha" aria-hidden="true"><span class="dia">18</span><span class="mes">oct</span></div>
             <span class="tallo" aria-hidden="true"></span>
           </div>
-          <div class="nodo-fila" aria-hidden="true"><span class="nodo"></span></div>
+          <div class="nodo-fila" aria-hidden="true"><span class="nodo"><span class="onda"></span><span class="onda"></span></span></div>
           <span class="conector" aria-hidden="true"></span>
           <div class="tarjeta">
             <strong><span class="visually-hidden">18 de octubre: </span>Encuentro en vivo</strong>
+            <span class="estado">¡Disponible para ver!</span>
           </div>
         </li>
         <li class="hito">
